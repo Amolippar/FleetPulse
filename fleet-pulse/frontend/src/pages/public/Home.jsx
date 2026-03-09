@@ -160,7 +160,7 @@ const Home = () => {
     };
 
     return (
-        <div className="container" style={{ padding: '50px 0' }}>
+        <div className="container home-container">
             <div style={{ textAlign: 'center', marginBottom: '50px' }}>
                 <h1>Welcome to Fleet Management System</h1>
                 <p style={{ marginTop: '20px', fontSize: '1.2rem', color: 'var(--text-light)' }}>
@@ -168,7 +168,7 @@ const Home = () => {
                 </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '50px', alignItems: 'start' }}>
+            <div className="home-grid">
                 {/* Estimate Form */}
                 <div className="card">
                     <h3 style={{ marginBottom: '20px', color: 'var(--primary-color)' }}>Get a Trip Estimate</h3>

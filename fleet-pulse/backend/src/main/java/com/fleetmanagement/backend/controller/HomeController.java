@@ -1,7 +1,6 @@
 package com.fleetmanagement.backend.controller;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +12,6 @@ import com.fleetmanagement.backend.service.BookingService;
 
 @RestController
 @RequestMapping("/api/home")
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173", "http://localhost:5174"})
 public class HomeController {
     private final BookingService bookingService;
 

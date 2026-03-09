@@ -40,6 +40,9 @@ public class SecurityConfig {
             
             // 4. Request Authorization Rules
             .authorizeHttpRequests(auth -> auth
+                // Allow all OPTIONS requests for CORS preflight
+                .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
+
                 // Public endpoints (No token needed)
                 .requestMatchers("/api/home/**", "/api/auth/**").permitAll()
                 

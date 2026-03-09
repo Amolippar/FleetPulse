@@ -160,7 +160,16 @@ const Home = () => {
     };
 
     return (
-        <div className="container home-container">
+        <div className="container" style={{ padding: '50px 0' }}>
+            {/* Inline dynamic style for responsive mobile without altering CSS files */}
+            <style>{`
+                @media (max-width: 768px) {
+                    .responsive-grid {
+                        grid-template-columns: 1fr !important;
+                        gap: 30px !important;
+                    }
+                }
+            `}</style>
             <div style={{ textAlign: 'center', marginBottom: '50px' }}>
                 <h1>Welcome to Fleet Management System</h1>
                 <p style={{ marginTop: '20px', fontSize: '1.2rem', color: 'var(--text-light)' }}>
@@ -168,7 +177,7 @@ const Home = () => {
                 </p>
             </div>
 
-            <div className="home-grid">
+            <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '50px', alignItems: 'start' }}>
                 {/* Estimate Form */}
                 <div className="card">
                     <h3 style={{ marginBottom: '20px', color: 'var(--primary-color)' }}>Get a Trip Estimate</h3>

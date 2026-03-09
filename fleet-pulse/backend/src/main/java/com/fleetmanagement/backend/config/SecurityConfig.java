@@ -62,11 +62,11 @@ public class SecurityConfig {
         return http.build();
     }
 
-    @Bean
-public CorsConfigurationSource corsConfigurationSource() {
+   @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
     CorsConfiguration config = new CorsConfiguration();
 
-    config.setAllowedOriginPatterns(List.of("*")); // allow all for now
+    config.setAllowedOriginPatterns(List.of("*"));
     config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS","PATCH"));
     config.setAllowedHeaders(List.of("Authorization","Content-Type","Cache-Control"));
     config.setAllowCredentials(true);

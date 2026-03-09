@@ -44,7 +44,7 @@ public class SecurityConfig {
                 .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
 
                 // Public endpoints (No token needed)
-                .requestMatchers("/api/home/**", "/api/auth/**").permitAll()
+                .requestMatchers("/", "/api/home/**", "/api/auth/**").permitAll()
                 
                 // Whitelist your Estimation endpoint for testing
                 .requestMatchers("/api/estimations/**").permitAll() 
